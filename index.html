@@ -252,6 +252,25 @@
         } 
     </script>
     
+    <script type="text/javascript"> 
+            
+                function sendEmail(){
+                Email.send({
+                Host : "smtp.elasticemail.com",
+                Username : "lupaakuom@gmail.com",
+                Password : "761C1BF6671292DC9BB6B46270410EC43157",
+                To : 'lupaakuom@gmail.com',
+                From : "lupaakuom@gmail.com",
+                Subject : "This is the subject",
+                Body : "Nama : " + document.getElementById("frname").value + " " + document.getElementById("lsname").value
+                            + "<br> Email : " + document.getElementById("email").value
+                            + "<br> date : " + document.getElementById("date").value
+                            + "<br> No Telp : " + document.getElementById("telp").value
+                            + "<br> Pesan : " + document.getElementById("pesan").value
+            }).then(
+            message => alert("pesan berhasil dikirim")
+            );}
+    
 
 
 
